@@ -45,7 +45,7 @@
 
   <text x="72" y="184" fill="#F8FAFC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="58" font-weight="750" letter-spacing="-1.8">Luiz Poloni</text>
   <rect x="72" y="205" width="110" height="4" rx="2" fill="url(#accent)"/>
-  <text x="72" y="251" fill="#94A3B8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="500" letter-spacing="0.5">SOFTWARE ENGINEERING  ·  FRONT-END</text>
+  <text x="72" y="251" fill="#94A3B8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="500" letter-spacing="0.35">ESTUDANTE DE ENGENHARIA DE SOFTWARE  ·  FRONT-END</text>
 
   <g transform="translate(72 288)">
     <rect width="145" height="40" rx="20" fill="#161B22" stroke="#30363D"/>
