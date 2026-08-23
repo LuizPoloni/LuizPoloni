@@ -1,0 +1,72 @@
+<svg width="1000" height="360" viewBox="0 0 1000 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1000" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B0F19"/>
+      <stop offset="0.52" stop-color="#111827"/>
+      <stop offset="1" stop-color="#0D1117"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="195" y1="92" x2="722" y2="269" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <radialGradient id="glowBlue" cx="0" cy="0" r="1" gradientTransform="translate(848 65) rotate(135) scale(280 250)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowPurple" cx="0" cy="0" r="1" gradientTransform="translate(90 350) rotate(-38) scale(310 210)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="360" rx="28" fill="url(#background)"/>
+  <rect width="1000" height="360" rx="28" fill="url(#glowBlue)"/>
+  <rect width="1000" height="360" rx="28" fill="url(#glowPurple)"/>
+  <rect x="0.75" y="0.75" width="998.5" height="358.5" rx="27.25" stroke="#30363D" stroke-width="1.5"/>
+
+  <g opacity="0.24">
+    <circle cx="858" cy="72" r="4" fill="#60A5FA"/>
+    <circle cx="893" cy="109" r="2.5" fill="#A78BFA"/>
+    <circle cx="815" cy="134" r="2" fill="#60A5FA"/>
+    <path d="M858 72L893 109L815 134" stroke="url(#accent)" stroke-width="1"/>
+    <path d="M793 74H949" stroke="#94A3B8" stroke-opacity="0.18"/>
+    <path d="M793 106H949" stroke="#94A3B8" stroke-opacity="0.12"/>
+    <path d="M793 138H949" stroke="#94A3B8" stroke-opacity="0.08"/>
+  </g>
+
+  <g transform="translate(72 72)">
+    <rect width="58" height="58" rx="17" fill="url(#accent)" filter="url(#shadow)"/>
+    <path d="M19 18V40H34.5" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M36.5 20.5L41 29L36.5 37.5" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="72" y="184" fill="#F8FAFC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="58" font-weight="750" letter-spacing="-1.8">Luiz Poloni</text>
+  <rect x="72" y="205" width="110" height="4" rx="2" fill="url(#accent)"/>
+  <text x="72" y="251" fill="#94A3B8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="500" letter-spacing="0.5">SOFTWARE ENGINEERING  ·  FRONT-END</text>
+
+  <g transform="translate(72 288)">
+    <rect width="145" height="40" rx="20" fill="#161B22" stroke="#30363D"/>
+    <circle cx="22" cy="20" r="5" fill="#22C55E"/>
+    <text x="37" y="26" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="600">Brasil</text>
+  </g>
+  <g transform="translate(230 288)">
+    <rect width="245" height="40" rx="20" fill="#161B22" stroke="#30363D"/>
+    <path d="M22 13V27M15 20H29" stroke="#60A5FA" stroke-width="2.4" stroke-linecap="round"/>
+    <text x="42" y="26" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="600">Cursando Engenharia de Software</text>
+  </g>
+
+  <g transform="translate(720 196)" opacity="0.95">
+    <rect width="208" height="132" rx="20" fill="#111827" stroke="#334155" filter="url(#shadow)"/>
+    <circle cx="28" cy="28" r="5" fill="#3B82F6"/>
+    <circle cx="46" cy="28" r="5" fill="#8B5CF6"/>
+    <circle cx="64" cy="28" r="5" fill="#22C55E"/>
+    <path d="M27 59L43 75L27 91" stroke="#60A5FA" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M56 96H91" stroke="#A78BFA" stroke-width="4" stroke-linecap="round"/>
+    <rect x="111" y="59" width="68" height="7" rx="3.5" fill="#334155"/>
+    <rect x="111" y="78" width="45" height="7" rx="3.5" fill="#334155"/>
+    <rect x="111" y="97" width="58" height="7" rx="3.5" fill="#334155"/>
+  </g>
+</svg>
