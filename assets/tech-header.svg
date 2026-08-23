@@ -1,0 +1,72 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020617" />
+      <stop offset="0.5" stop-color="#0F172A" />
+      <stop offset="1" stop-color="#11102A" />
+    </linearGradient>
+    <linearGradient id="neon" x1="270" y1="0" x2="930" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE" />
+      <stop offset="0.5" stop-color="#60A5FA" />
+      <stop offset="1" stop-color="#A78BFA" />
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE" stop-opacity="0" />
+      <stop offset="0.5" stop-color="#22D3EE" stop-opacity="0.15" />
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0" />
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#38BDF8" stroke-opacity="0.09" />
+    </pattern>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="320" rx="22" fill="url(#background)" />
+  <rect width="1200" height="320" rx="22" fill="url(#grid)" />
+  <rect x="1" y="1" width="1198" height="318" rx="21" stroke="url(#neon)" stroke-opacity="0.6" stroke-width="2" />
+
+  <g stroke="#22D3EE" stroke-width="2" stroke-opacity="0.55">
+    <path d="M0 72H130L158 100H260" />
+    <path d="M0 245H170L205 210H310" />
+    <path d="M1200 68H1060L1028 100H940" />
+    <path d="M1200 250H1080L1042 212H930" />
+  </g>
+  <g fill="#22D3EE" filter="url(#glow)">
+    <circle cx="158" cy="100" r="4">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="205" cy="210" r="4">
+      <animate attributeName="opacity" values="1;0.35;1" dur="2.8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1028" cy="100" r="4">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1042" cy="212" r="4">
+      <animate attributeName="opacity" values="1;0.35;1" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <g font-family="JetBrains Mono, Fira Code, monospace" letter-spacing="2">
+    <text x="48" y="42" fill="#67E8F9" font-size="13">SYSTEM.STATUS // ONLINE</text>
+    <text x="1018" y="42" fill="#A78BFA" font-size="13" textLength="134" lengthAdjust="spacingAndGlyphs">PROFILE // V3</text>
+
+    <text x="401" y="149" fill="#2563EB" fill-opacity="0.35" font-size="58" font-weight="700" textLength="404" lengthAdjust="spacingAndGlyphs">LUIZ POLONI</text>
+    <text x="398" y="146" fill="#60A5FA" font-size="58" font-weight="700" textLength="404" lengthAdjust="spacingAndGlyphs">LUIZ POLONI</text>
+    <text x="405" y="187" fill="#CBD5E1" font-size="17" textLength="390" lengthAdjust="spacingAndGlyphs">FRONT-END  •  DESIGN  •  CREATIVE CODE</text>
+
+    <text x="402" y="242" fill="#94A3B8" font-size="14" textLength="386" lengthAdjust="spacingAndGlyphs">&gt; transformando ideias em experiências digitais</text>
+    <rect x="802" y="229" width="9" height="17" fill="#22D3EE">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <rect x="0" y="0" width="1200" height="42" fill="url(#scan)" opacity="0.8">
+    <animate attributeName="y" values="10;268;10" dur="7s" repeatCount="indefinite" />
+  </rect>
+</svg>
