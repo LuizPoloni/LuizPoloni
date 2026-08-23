@@ -67,9 +67,9 @@
     <text x="37" y="26" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="600">Brasil</text>
   </g>
   <g transform="translate(230 211)">
-    <rect width="266" height="40" rx="20" fill="#161B22" stroke="#30363D"/>
+    <rect width="340" height="40" rx="20" fill="#161B22" stroke="#30363D"/>
     <path d="M22 13V27M15 20H29" stroke="#94A3B8" stroke-width="2.4" stroke-linecap="round"/>
-    <text x="42" y="26" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="600">Engenharia de Software · Em curso</text>
+    <text x="42" y="26" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Engenharia de Software · Em curso</text>
   </g>
 
   <g transform="translate(720 118)" opacity="0.95">
