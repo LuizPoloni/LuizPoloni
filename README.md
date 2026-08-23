@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="100%" src="./assets/profile-hero.svg" alt="Luiz Poloni — estudante de Engenharia de Software e desenvolvedor front-end" />
+  <img width="100%" src="./assets/profile-hero-v2.svg" alt="Luiz Poloni — estudante de Engenharia de Software e desenvolvedor front-end" />
 </p>
 
 <p align="center">
