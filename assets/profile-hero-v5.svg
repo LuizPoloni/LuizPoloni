@@ -1,36 +1,28 @@
 <svg width="1000" height="300" viewBox="0 0 1000 300" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1000" y2="300" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0B0F19"/>
-      <stop offset="0.52" stop-color="#111827"/>
+      <stop stop-color="#0D1117"/>
+      <stop offset="0.52" stop-color="#111318"/>
       <stop offset="1" stop-color="#0D1117"/>
     </linearGradient>
     <linearGradient id="accent" x1="195" y1="92" x2="722" y2="269" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3B82F6"/>
-      <stop offset="1" stop-color="#8B5CF6"/>
+      <stop stop-color="#E5E7EB"/>
+      <stop offset="1" stop-color="#64748B"/>
     </linearGradient>
-    <radialGradient id="glowBlue" cx="0" cy="0" r="1" gradientTransform="translate(848 65) rotate(135) scale(280 250)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#2563EB" stop-opacity="0.32"/>
-      <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="glowPurple" cx="0" cy="0" r="1" gradientTransform="translate(90 350) rotate(-38) scale(310 210)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#7C3AED" stop-opacity="0.25"/>
-      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
-    </radialGradient>
     <linearGradient id="hexStroke" x1="510" y1="20" x2="1010" y2="285" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3B82F6" stop-opacity="0.08"/>
-      <stop offset="0.5" stop-color="#6366F1" stop-opacity="0.3"/>
-      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0.1"/>
+      <stop stop-color="#94A3B8" stop-opacity="0.03"/>
+      <stop offset="0.5" stop-color="#CBD5E1" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#94A3B8" stop-opacity="0.03"/>
     </linearGradient>
     <pattern id="hexGrid" width="72" height="84" patternUnits="userSpaceOnUse">
-      <path d="M18 1H54L71 21L54 41H18L1 21L18 1Z" fill="#3B82F6" fill-opacity="0.025" stroke="url(#hexStroke)" stroke-width="1"/>
-      <path d="M-18 43H18L35 63L18 83H-18L-35 63L-18 43Z" fill="#8B5CF6" fill-opacity="0.02" stroke="url(#hexStroke)" stroke-width="1"/>
-      <path d="M54 43H90L107 63L90 83H54L37 63L54 43Z" fill="#8B5CF6" fill-opacity="0.02" stroke="url(#hexStroke)" stroke-width="1"/>
+      <path d="M18 1H54L71 21L54 41H18L1 21L18 1Z" fill="#E5E7EB" fill-opacity="0.012" stroke="url(#hexStroke)" stroke-width="1"/>
+      <path d="M-18 43H18L35 63L18 83H-18L-35 63L-18 43Z" fill="#E5E7EB" fill-opacity="0.01" stroke="url(#hexStroke)" stroke-width="1"/>
+      <path d="M54 43H90L107 63L90 83H54L37 63L54 43Z" fill="#E5E7EB" fill-opacity="0.01" stroke="url(#hexStroke)" stroke-width="1"/>
     </pattern>
     <radialGradient id="hexPulse" cx="50%" cy="50%" r="50%">
-      <stop stop-color="#60A5FA" stop-opacity="0.32"/>
-      <stop offset="0.45" stop-color="#7C3AED" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+      <stop stop-color="#F8FAFC" stop-opacity="0.08"/>
+      <stop offset="0.45" stop-color="#CBD5E1" stop-opacity="0.025"/>
+      <stop offset="1" stop-color="#CBD5E1" stop-opacity="0"/>
     </radialGradient>
     <clipPath id="roundedClip">
       <rect width="1000" height="300" rx="28"/>
@@ -41,26 +33,24 @@
   </defs>
 
   <rect width="1000" height="300" rx="28" fill="url(#background)"/>
-  <rect width="1000" height="300" rx="28" fill="url(#glowBlue)"/>
-  <rect width="1000" height="300" rx="28" fill="url(#glowPurple)"/>
   <rect x="0.75" y="0.75" width="998.5" height="298.5" rx="27.25" stroke="#30363D" stroke-width="1.5"/>
 
-  <g clip-path="url(#roundedClip)" opacity="0.82">
+  <g clip-path="url(#roundedClip)" opacity="0.55">
     <g>
       <rect x="500" y="-84" width="590" height="468" fill="url(#hexGrid)"/>
       <animateTransform attributeName="transform" type="translate" values="0 0;-72 42;0 84;72 42;0 0" dur="18s" repeatCount="indefinite"/>
     </g>
-    <ellipse cx="610" cy="88" rx="220" ry="150" fill="url(#hexPulse)" opacity="0.46">
+    <ellipse cx="610" cy="88" rx="220" ry="150" fill="url(#hexPulse)" opacity="0.2">
       <animate attributeName="cx" values="610;930;610" dur="7.5s" repeatCount="indefinite"/>
       <animate attributeName="cy" values="88;215;88" dur="7.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3.75s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.08;0.25;0.08" dur="3.75s" repeatCount="indefinite"/>
     </ellipse>
   </g>
 
   <g opacity="0.24">
-    <circle cx="858" cy="72" r="4" fill="#60A5FA"/>
-    <circle cx="893" cy="109" r="2.5" fill="#A78BFA"/>
-    <circle cx="815" cy="134" r="2" fill="#60A5FA"/>
+    <circle cx="858" cy="72" r="4" fill="#94A3B8"/>
+    <circle cx="893" cy="109" r="2.5" fill="#CBD5E1"/>
+    <circle cx="815" cy="134" r="2" fill="#64748B"/>
     <path d="M858 72L893 109L815 134" stroke="url(#accent)" stroke-width="1"/>
     <path d="M793 74H949" stroke="#94A3B8" stroke-opacity="0.18"/>
     <path d="M793 106H949" stroke="#94A3B8" stroke-opacity="0.12"/>
@@ -78,17 +68,17 @@
   </g>
   <g transform="translate(230 211)">
     <rect width="266" height="40" rx="20" fill="#161B22" stroke="#30363D"/>
-    <path d="M22 13V27M15 20H29" stroke="#60A5FA" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M22 13V27M15 20H29" stroke="#94A3B8" stroke-width="2.4" stroke-linecap="round"/>
     <text x="42" y="26" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="600">Engenharia de Software · Em curso</text>
   </g>
 
   <g transform="translate(720 118)" opacity="0.95">
-    <rect width="208" height="132" rx="20" fill="#111827" stroke="#334155" filter="url(#shadow)"/>
-    <circle cx="28" cy="28" r="5" fill="#3B82F6"/>
-    <circle cx="46" cy="28" r="5" fill="#8B5CF6"/>
-    <circle cx="64" cy="28" r="5" fill="#22C55E"/>
-    <path d="M27 59L43 75L27 91" stroke="#60A5FA" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M56 96H91" stroke="#A78BFA" stroke-width="4" stroke-linecap="round"/>
+    <rect width="208" height="132" rx="20" fill="#101318" stroke="#2B3038" filter="url(#shadow)"/>
+    <circle cx="28" cy="28" r="5" fill="#64748B"/>
+    <circle cx="46" cy="28" r="5" fill="#9CA3AF"/>
+    <circle cx="64" cy="28" r="5" fill="#D1D5DB"/>
+    <path d="M27 59L43 75L27 91" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M56 96H91" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
     <rect x="111" y="59" width="68" height="7" rx="3.5" fill="#334155"/>
     <rect x="111" y="78" width="45" height="7" rx="3.5" fill="#334155"/>
     <rect x="111" y="97" width="58" height="7" rx="3.5" fill="#334155"/>

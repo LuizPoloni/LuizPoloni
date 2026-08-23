@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="100%" src="./assets/profile-hero-v4.svg" alt="Luiz Poloni — Software Engineer loading e desenvolvedor front-end" />
+  <img width="100%" src="./assets/profile-hero-v5.svg" alt="Luiz Poloni — Software Engineer loading e desenvolvedor front-end" />
 </p>
 
 <p align="center">
