@@ -1,19 +1,16 @@
 <div align="center">
 
-# Olá, eu sou o Luiz Poloni 👋
+# Olá, eu sou o Luiz
 
-**Desenvolvedor front-end com olhar para design e experiências digitais bem cuidadas.**
+Desenvolvedor front-end interessado em design, arquitetura e 3D.
 
-Crio interfaces modernas e responsivas, unindo código, identidade visual e atenção aos detalhes.
+Construo interfaces responsivas com HTML, CSS e JavaScript. Gosto de trabalhar a parte visual do projeto sem deixar de lado estrutura, desempenho e usabilidade.
 
 </div>
 
-## Sobre mim
+## O que faço
 
-- 💻 Desenvolvimento front-end com **HTML, CSS e JavaScript**
-- 🎨 Interesse especial por **arquitetura, 3D e identidade visual**
-- 📱 Foco em interfaces responsivas, acessíveis e agradáveis de usar
-- 🚀 Sempre transformando ideias visuais em experiências na web
+Meus projetos misturam código e direção visual. Tenho interesse especial por sites de portfólio e identidades ligadas a arquitetura, renderização 3D e trabalhos autorais.
 
 ## Tecnologias
 
@@ -23,11 +20,7 @@ Crio interfaces modernas e responsivas, unindo código, identidade visual e aten
 
 | Projeto | O que você vai encontrar |
 | --- | --- |
-| [Taís Arquitetura](https://github.com/LuizPoloni/tais-arch) | Site responsivo para um estúdio de arquitetura, com portfólio, animações e foco em performance. |
+| [Taís Arquitetura](https://github.com/LuizPoloni/tais-arch) | Site de um estúdio de arquitetura com portfólio e animações. |
 | [The Lie](https://github.com/LuizPoloni/thelie) | Identidade visual e site-portfólio para uma marca autoral de esculturas em barro. |
-| [Studio Work 3D](https://github.com/LuizPoloni/Studio-Work-3D) | Portfólio moderno e minimalista para projetos de arquitetura e renderizações 3D. |
+| [Studio Work 3D](https://github.com/LuizPoloni/Studio-Work-3D) | Site de portfólio para projetos de arquitetura e renderizações 3D. |
 | [Locais Turísticos](https://github.com/LuizPoloni/locais-turisticos-rocketseat) | Página responsiva de destinos turísticos criada como desafio prático da Rocketseat. |
-
-## Vamos conversar?
-
-Explore meus projetos e acompanhe o que estou construindo por aqui. Se alguma ideia fizer sentido para você, fique à vontade para abrir uma issue ou entrar em contato pelo GitHub.
