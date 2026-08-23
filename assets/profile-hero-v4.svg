@@ -17,6 +17,24 @@
       <stop stop-color="#7C3AED" stop-opacity="0.25"/>
       <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="hexStroke" x1="510" y1="20" x2="1010" y2="285" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6" stop-opacity="0.08"/>
+      <stop offset="0.5" stop-color="#6366F1" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0.1"/>
+    </linearGradient>
+    <pattern id="hexGrid" width="72" height="84" patternUnits="userSpaceOnUse">
+      <path d="M18 1H54L71 21L54 41H18L1 21L18 1Z" fill="#3B82F6" fill-opacity="0.025" stroke="url(#hexStroke)" stroke-width="1"/>
+      <path d="M-18 43H18L35 63L18 83H-18L-35 63L-18 43Z" fill="#8B5CF6" fill-opacity="0.02" stroke="url(#hexStroke)" stroke-width="1"/>
+      <path d="M54 43H90L107 63L90 83H54L37 63L54 43Z" fill="#8B5CF6" fill-opacity="0.02" stroke="url(#hexStroke)" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="hexPulse" cx="50%" cy="50%" r="50%">
+      <stop stop-color="#60A5FA" stop-opacity="0.32"/>
+      <stop offset="0.45" stop-color="#7C3AED" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="roundedClip">
+      <rect width="1000" height="300" rx="28"/>
+    </clipPath>
     <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
       <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity="0.28"/>
     </filter>
@@ -26,6 +44,18 @@
   <rect width="1000" height="300" rx="28" fill="url(#glowBlue)"/>
   <rect width="1000" height="300" rx="28" fill="url(#glowPurple)"/>
   <rect x="0.75" y="0.75" width="998.5" height="298.5" rx="27.25" stroke="#30363D" stroke-width="1.5"/>
+
+  <g clip-path="url(#roundedClip)" opacity="0.82">
+    <g>
+      <rect x="500" y="-84" width="590" height="468" fill="url(#hexGrid)"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-72 42;0 84;72 42;0 0" dur="18s" repeatCount="indefinite"/>
+    </g>
+    <ellipse cx="610" cy="88" rx="220" ry="150" fill="url(#hexPulse)" opacity="0.46">
+      <animate attributeName="cx" values="610;930;610" dur="7.5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="88;215;88" dur="7.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3.75s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
 
   <g opacity="0.24">
     <circle cx="858" cy="72" r="4" fill="#60A5FA"/>
