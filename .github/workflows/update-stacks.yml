@@ -19,7 +19,7 @@ jobs:
       - name: Baixar o perfil
         uses: actions/checkout@v5
 
-      - name: Gerar cartão com as stacks atuais
+      - name: Gerar painéis do perfil
         env:
           PROFILE_LANGUAGES_TOKEN: ${{ secrets.PROFILE_LANGUAGES_TOKEN }}
           PROFILE_OWNER: ${{ github.repository_owner }}
@@ -27,13 +27,13 @@ jobs:
 
       - name: Publicar somente quando houver mudanças
         run: |
-          if git diff --quiet -- assets/stack-card.svg; then
-            echo "Nenhuma alteração nas stacks."
+          if git diff --quiet -- assets/stack-card.svg assets/stats-card.svg; then
+            echo "Nenhuma alteração nos painéis."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/stack-card.svg
-          git commit -m "Atualiza stacks do perfil"
+          git add assets/stack-card.svg assets/stats-card.svg
+          git commit -m "Atualiza painéis do perfil"
           git push

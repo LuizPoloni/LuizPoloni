@@ -99,34 +99,48 @@ const colors = {
   "C#": "#178600",
 };
 
-function makeTile(language, x, y) {
+function makeLanguageItem(language, x, y) {
   const name = escapeXml(shorten(language.name));
   const color = colors[language.name] || "#8B949E";
 
   return `
   <g transform="translate(${x} ${y})">
-    <rect width="143" height="34" rx="8" fill="#161B22" stroke="#30363D"/>
-    <circle cx="18" cy="17" r="6" fill="${color}"/>
-    <text x="32" y="22" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">${name}</text>
+    <circle cx="6" cy="6" r="5" fill="${color}"/>
+    <text x="19" y="11" fill="#D0D7DE" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">${name}</text>
   </g>`;
 }
 
-function renderCard(languages) {
+function renderStackCard(languages) {
+  const selected = languages.slice(0, 6);
   const positions = [
-    [20, 72],
-    [177, 72],
-    [20, 114],
-    [177, 114],
-    [20, 156],
-    [177, 156],
+    [24, 92],
+    [180, 92],
+    [24, 128],
+    [180, 128],
+    [24, 164],
+    [180, 164],
   ];
 
-  const tiles = languages
-    .slice(0, positions.length)
+  const items = selected
     .map((language, index) =>
-      makeTile(language, positions[index][0], positions[index][1]),
+      makeLanguageItem(language, positions[index][0], positions[index][1]),
     )
     .join("");
+
+  const totalPresence = selected.reduce(
+    (sum, language) => sum + language.repositories,
+    0,
+  );
+  let segmentX = 20;
+  const segments = selected
+    .map((language) => {
+      const width = (300 * language.repositories) / totalPresence;
+      const color = colors[language.name] || "#8B949E";
+      const segment = `<rect x="${segmentX.toFixed(2)}" y="65" width="${Math.max(width - 3, 2).toFixed(2)}" height="4" rx="2" fill="${color}"/>`;
+      segmentX += width;
+      return segment;
+    })
+    .join("\n  ");
 
   return `<svg width="340" height="200" viewBox="0 0 340 200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -135,9 +149,45 @@ function renderCard(languages) {
       <stop offset="1" stop-color="#111318"/>
     </linearGradient>
   </defs>
-  <rect x="0.5" y="0.5" width="339" height="199" rx="8" fill="url(#cardBg)" stroke="#30363D"/>
-  <text x="20" y="33" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Stacks detectadas</text>
-  <text x="20" y="54" fill="#8B949E" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="10">PROJETOS PÚBLICOS E PRIVADOS</text>${tiles}
+  <rect x="0.5" y="0.5" width="339" height="199" rx="12" fill="url(#cardBg)" stroke="#30363D"/>
+  <text x="20" y="31" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Stack em uso</text>
+  <circle cx="24" cy="49" r="3" fill="#3FB950"/>
+  <text x="34" y="53" fill="#8B949E" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="9" font-weight="600" letter-spacing="0.7">DETECTADA AUTOMATICAMENTE</text>
+  ${segments}${items}
+</svg>
+`;
+}
+
+function renderStatsCard(repositories, languageCount) {
+  const privateCount = repositories.filter(
+    (repository) => repository.private,
+  ).length;
+  const publicCount = repositories.length - privateCount;
+
+  return `<svg width="340" height="200" viewBox="0 0 340 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="340" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1117"/>
+      <stop offset="1" stop-color="#111318"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="339" height="199" rx="12" fill="url(#cardBg)" stroke="#30363D"/>
+  <text x="20" y="31" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Visão geral</text>
+  <circle cx="24" cy="49" r="3" fill="#3FB950"/>
+  <text x="34" y="53" fill="#8B949E" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="9" font-weight="600" letter-spacing="0.7">ATUALIZAÇÃO AUTOMÁTICA</text>
+
+  <text x="20" y="117" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="52" font-weight="700">${repositories.length}</text>
+  <text x="91" y="111" fill="#8B949E" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">projetos</text>
+
+  <line x1="20" y1="139.5" x2="320" y2="139.5" stroke="#30363D"/>
+  <text x="20" y="165" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">${privateCount}</text>
+  <text x="20" y="182" fill="#8B949E" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="10">privados</text>
+  <line x1="109.5" y1="151" x2="109.5" y2="183" stroke="#30363D"/>
+  <text x="130" y="165" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">${publicCount}</text>
+  <text x="130" y="182" fill="#8B949E" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="10">públicos</text>
+  <line x1="219.5" y1="151" x2="219.5" y2="183" stroke="#30363D"/>
+  <text x="240" y="165" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">${languageCount}</text>
+  <text x="240" y="182" fill="#8B949E" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="10">stacks</text>
 </svg>
 `;
 }
@@ -179,8 +229,15 @@ if (!languages.length) {
 }
 
 await mkdir("assets", { recursive: true });
-await writeFile("assets/stack-card.svg", renderCard(languages), "utf8");
+await Promise.all([
+  writeFile("assets/stack-card.svg", renderStackCard(languages), "utf8"),
+  writeFile(
+    "assets/stats-card.svg",
+    renderStatsCard(repositories, languages.length),
+    "utf8",
+  ),
+]);
 
 console.log(
-  `Cartão atualizado com ${languages.length} linguagens detectadas em ${repositories.length} repositórios.`,
+  `Painéis atualizados com ${languages.length} linguagens detectadas em ${repositories.length} repositórios.`,
 );
