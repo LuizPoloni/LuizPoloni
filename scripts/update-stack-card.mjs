@@ -143,6 +143,13 @@ function renderCard(languages) {
 }
 
 const repositories = await listOwnedRepositories();
+
+if (!repositories.some((repository) => repository.private)) {
+  throw new Error(
+    "O token não possui acesso aos repositórios privados. Edite o token e selecione All repositories.",
+  );
+}
+
 const languageResponses = await mapWithConcurrency(
   repositories,
   6,
