@@ -27,7 +27,7 @@
 
 <div align="center">
   <img height="185" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=LuizPoloni&theme=github_dark" alt="Estatísticas de Luiz Poloni no GitHub" />
-  <img height="185" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=LuizPoloni&theme=github_dark" alt="Linguagens mais usadas por Luiz Poloni" />
+  <img height="185" src="./assets/stack-card.svg" alt="Tecnologias atuais de Luiz Poloni: TypeScript, JavaScript, HTML e CSS" />
 </div>
 
 <br />
