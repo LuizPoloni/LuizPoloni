@@ -1,0 +1,39 @@
+name: Atualizar stacks do perfil
+
+on:
+  schedule:
+    - cron: "17 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-profile-stacks
+  cancel-in-progress: true
+
+jobs:
+  update-stacks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o perfil
+        uses: actions/checkout@v4
+
+      - name: Gerar cartão com as stacks atuais
+        env:
+          PROFILE_LANGUAGES_TOKEN: ${{ secrets.PROFILE_LANGUAGES_TOKEN }}
+          PROFILE_OWNER: ${{ github.repository_owner }}
+        run: node scripts/update-stack-card.mjs
+
+      - name: Publicar somente quando houver mudanças
+        run: |
+          if git diff --quiet -- assets/stack-card.svg; then
+            echo "Nenhuma alteração nas stacks."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/stack-card.svg
+          git commit -m "Atualiza stacks do perfil"
+          git push
