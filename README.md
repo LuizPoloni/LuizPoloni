@@ -20,7 +20,7 @@
 <h3 align="center">Tecnologias</h3>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,git,github,vscode&theme=dark" alt="HTML, CSS, JavaScript, TypeScript, React, Git, GitHub e VS Code" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,java,git,github,vscode&theme=dark" alt="HTML, CSS, JavaScript, TypeScript, React, Java, Git, GitHub e VS Code" />
 </p>
 
 <br />
