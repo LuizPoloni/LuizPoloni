@@ -9,12 +9,12 @@
   <text x="20" y="31" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Stack em uso</text>
   <circle cx="24" cy="49" r="3" fill="#3FB950"/>
   <text x="34" y="53" fill="#8B949E" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="9" font-weight="600" letter-spacing="0.7">DETECTADA AUTOMATICAMENTE</text>
-  <rect x="20.00" y="65" width="78.82" height="4" rx="2" fill="#663399"/>
-  <rect x="101.82" y="65" width="75.79" height="4" rx="2" fill="#F7DF1E"/>
-  <rect x="180.61" y="65" width="66.70" height="4" rx="2" fill="#E34F26"/>
-  <rect x="250.30" y="65" width="27.30" height="4" rx="2" fill="#3178C6"/>
-  <rect x="280.61" y="65" width="18.21" height="4" rx="2" fill="#8B949E"/>
-  <rect x="301.82" y="65" width="15.18" height="4" rx="2" fill="#777BB4"/>
+  <rect x="20.00" y="65" width="78.00" height="4" rx="2" fill="#663399"/>
+  <rect x="101.00" y="65" width="75.00" height="4" rx="2" fill="#F7DF1E"/>
+  <rect x="179.00" y="65" width="69.00" height="4" rx="2" fill="#E34F26"/>
+  <rect x="251.00" y="65" width="27.00" height="4" rx="2" fill="#3178C6"/>
+  <rect x="281.00" y="65" width="18.00" height="4" rx="2" fill="#8B949E"/>
+  <rect x="302.00" y="65" width="15.00" height="4" rx="2" fill="#777BB4"/>
   <g transform="translate(24 92)">
     <circle cx="6" cy="6" r="5" fill="#663399"/>
     <text x="19" y="11" fill="#D0D7DE" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">CSS</text>
